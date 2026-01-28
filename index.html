@@ -3,224 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENIGMA STARTER - Gift Box Wallet</title>
+    <title>ENIGMA STARTER - Mystical Gift Box Wallet</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="enigma-nav">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="nav-icon">🕉️</span>
-                <span class="nav-title">ENIGMA STARTER</span>
-            </div>
-            <div class="nav-links">
-                <a href="#" class="nav-link" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a>
-                <a href="#" class="nav-link" onclick="showSection('treasure')"><i class="fas fa-gem"></i> Treasure</a>
-                <a href="#" class="nav-link" onclick="showSection('about')"><i class="fas fa-scroll"></i> About</a>
-                <button class="connect-btn" id="connect-btn" onclick="enigmaWallet.connectWallet()">
-                    <i class="fas fa-plug"></i> <span>Connect</span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Mystical Background -->
+    <div class="mystic-bg">
+        <div class="star" style="top:10%;left:15%"></div>
+        <div class="star" style="top:30%;left:85%"></div>
+        <div class="star" style="top:70%;left:10%"></div>
+        <div class="star" style="top:85%;left:75%"></div>
+    </div>
 
     <!-- Main Container -->
-    <main class="enigma-container">
-        <!-- Home Section -->
-        <section id="home-section" class="section active">
-            <div class="enigma-header">
-                <h1 class="enigma-title">
-                    <span class="title-text">ENIGMA STARTER</span>
-                    <span class="title-sub">Gift Box Wallet</span>
+    <div class="enigma-container">
+        <!-- Ancient Header -->
+        <header class="ancient-header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="title-icon">🕉️</span>
+                    <span class="title-text">ENIGMA</span>
+                    <span class="title-sub">STARTER</span>
                 </h1>
-                <p class="enigma-tagline">
-                    "Not all treasure is silver and gold, mate."<br>
-                    <span class="tagline-author">— Captain Jack Sparrow</span>
-                </p>
-            </div>
-
-            <!-- Status Display -->
-            <div id="status" class="status-box">
-                <div class="status-content">
-                    <i class="fas fa-gift status-icon"></i>
-                    <span class="status-text">Click the gift box to begin your adventure</span>
+                <div class="header-quote">
+                    <div class="quote-mark left">"</div>
+                    <p class="quote-text">Not all treasure is silver and gold, mate.</p>
+                    <div class="quote-mark right">"</div>
+                </div>
+                <p class="quote-author">— Captain Jack Sparrow</p>
+                
+                <!-- Sacred Numbers Display -->
+                <div class="sacred-numbers">
+                    <span class="number" title="Foundation">7</span>
+                    <span class="number" title="Transformation">13</span>
+                    <span class="number" title="Codes">22</span>
+                    <span class="number" title="Structure">34</span>
+                    <span class="number" title="Experience">41</span>
+                    <span class="number" title="Liberation">50</span>
                 </div>
             </div>
+        </header>
 
-            <!-- The Gift Box -->
-            <div class="gift-container">
-                <div class="gift-box" id="gift-box" onclick="enigmaWallet.toggleGift()">
+        <!-- Status Display -->
+        <div id="status" class="status-shrine">
+            <div class="status-icon">⭐</div>
+            <div class="status-text" id="statusText">Enigma Vision Activated</div>
+            <div class="status-pulse"></div>
+        </div>
+
+        <!-- The Sacred Gift Shrine -->
+        <div class="gift-shrine">
+            <div class="shrine-platform">
+                <div class="shrine-pattern"></div>
+                <div class="shrine-ornament left"></div>
+                <div class="shrine-ornament right"></div>
+                
+                <!-- The Gift Box -->
+                <div class="gift-box" id="giftBox">
                     <div class="gift-lid">
                         <div class="gift-bow">
                             <div class="bow-center"></div>
-                            <div class="bow-loop left-loop"></div>
-                            <div class="bow-loop right-loop"></div>
+                            <div class="bow-loop l1"></div>
+                            <div class="bow-loop l2"></div>
+                            <div class="bow-loop r1"></div>
+                            <div class="bow-loop r2"></div>
                         </div>
                     </div>
                     <div class="gift-body">
                         <div class="gift-pattern"></div>
-                        <div class="gift-sparkle" id="sparkle-1"></div>
-                        <div class="gift-sparkle" id="sparkle-2"></div>
-                        <div class="gift-sparkle" id="sparkle-3"></div>
+                        <div class="gift-glow"></div>
                     </div>
                 </div>
-                <p class="gift-instruction">Click to unwrap your digital treasure</p>
             </div>
+            <p class="shrine-instruction">
+                <i class="fas fa-hand-point-up"></i>
+                Touch the gift to reveal your digital treasure
+            </p>
+        </div>
 
-            <!-- Treasure Display -->
-            <div id="treasure" class="treasure-display">
-                <!-- Content will be filled by JavaScript -->
+        <!-- Treasure Display Area -->
+        <div id="treasure" class="treasure-chamber">
+            <div class="chamber-door left"></div>
+            <div class="chamber-content" id="chamberContent">
+                <!-- Will be filled by JavaScript -->
             </div>
+            <div class="chamber-door right"></div>
+        </div>
 
-            <!-- Features Grid -->
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="feature-title">Secure</h3>
-                    <p class="feature-desc">Your treasure guarded by blockchain encryption</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                    <h3 class="feature-title">Gift Ready</h3>
-                    <p class="feature-desc">Wrap and send assets as personalized gifts</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3 class="feature-title">Enigma Vision</h3>
-                    <p class="feature-desc">Demo mode for exploration without wallet</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Treasure Section -->
-        <section id="treasure-section" class="section">
-            <div class="section-header">
-                <h2><i class="fas fa-chess-queen"></i> Your Treasure Vault</h2>
-                <p>Manage your digital assets with elegance</p>
-            </div>
-            <div class="vault-container">
-                <div class="vault-display">
-                    <div class="vault-door">
-                        <div class="vault-wheel"></div>
-                        <div class="vault-handle"></div>
-                    </div>
-                    <div class="vault-content" id="vault-content">
-                        <p class="vault-message">Connect your wallet to reveal your treasures</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about-section" class="section">
-            <div class="section-header">
-                <h2><i class="fas fa-scroll"></i> The Enigma Scroll</h2>
-                <p>Understanding the magic behind the gift box</p>
-            </div>
-            <div class="about-content">
-                <div class="about-card">
-                    <h3><i class="fas fa-water"></i> The Apsû Connection</h3>
-                    <p>Just as ENKI mastered the primordial waters (Apsû), this wallet connects you to the deep currents of blockchain technology.</p>
-                </div>
-                <div class="about-card">
-                    <h3><i class="fas fa-code"></i> The Digital Me</h3>
-                    <p>Ancient civilizations had the "Me" - divine codes for civilization. Today, we have smart contracts and digital assets.</p>
-                </div>
-                <div class="about-card">
-                    <h3><i class="fas fa-anchor"></i> Your Anchor</h3>
-                    <p>Your 7-13-22-34-41-50 sequence serves as a personal anchor in the Enigma Zone, grounding your digital journey.</p>
-                </div>
-                <div class="developer-note">
-                    <h4><i class="fas fa-handshake"></i> From the Co-Creator</h4>
-                    <p>This project blends ancient wisdom with modern technology. It's not just a wallet - it's a story about how we interact with value in the digital age. Every click, every connection, every gift wrapped is part of your unique narrative.</p>
-                    <div class="signature">
-                        <span class="sig-name">Khan-Amit & ENKI</span>
-                        <span class="sig-title">Co-Creators</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="enigma-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="footer-icon">🎁</span>
-                <span class="footer-title">ENIGMA STARTER</span>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/Khan-Amit/ENIGMA_STARTER" target="_blank" class="footer-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="#" class="footer-link" onclick="showSection('about')">
-                    <i class="fas fa-info-circle"></i> About
-                </a>
-                <button class="footer-btn" onclick="enigmaWallet.demoMode()">
-                    <i class="fas fa-eye"></i> Demo Mode
+        <!-- Enigma Controls -->
+        <div class="enigma-controls">
+            <div class="control-row">
+                <button class="control-btn fountain" onclick="enigmaWallet.getFaucet()">
+                    <i class="fas fa-faucet"></i>
+                    <span>Sacred Fountain</span>
+                    <small>Get Enigma ETH</small>
+                </button>
+                
+                <button class="control-btn conversion" onclick="enigmaWallet.showConversion()">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Alchemy Table</span>
+                    <small>Convert Values</small>
                 </button>
             </div>
-            <div class="footer-copyright">
-                <p>© 2024 ENIGMA STARTER. Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> and ancient wisdom.</p>
-                <p class="footer-encryption">
-                    <i class="fas fa-lock"></i> Connection Secured • 
-                    <span id="connection-status-text">Enigma Zone Active</span>
-                </p>
+            
+            <div class="control-row">
+                <button class="control-btn gift" onclick="enigmaWallet.wrapGift()">
+                    <i class="fas fa-gift"></i>
+                    <span>Gift Altar</span>
+                    <small>Wrap Treasures</small>
+                </button>
+                
+                <button class="control-btn seal" onclick="enigmaWallet.sealEnigma()">
+                    <i class="fas fa-lock"></i>
+                    <span>Seal Chamber</span>
+                    <small>Reset & Refresh</small>
+                </button>
             </div>
         </div>
-    </footer>
+
+        <!-- Wisdom Section -->
+        <div class="wisdom-scroll">
+            <div class="scroll-header">
+                <i class="fas fa-scroll"></i>
+                <h3>Ancient Wisdom</h3>
+            </div>
+            <div class="scroll-content">
+                <p>"The true treasure lies not in the gold, but in the journey of discovery. Each number in your sequence holds a secret, each click reveals a mystery."</p>
+                <div class="scroll-footer">
+                    <span class="wisdom-author">— ENKI, Lord of the Apsû</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="ancient-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">🎁</span>
+                    <span class="footer-name">ENIGMA STARTER</span>
+                </div>
+                <div class="footer-info">
+                    <p>Built with <i class="fas fa-heart" style="color:#e74c3c;"></i> & ancient wisdom</p>
+                    <p class="footer-version">Version: 1.0 · Anchor: 7-13-22-34-41-50</p>
+                </div>
+                <div class="footer-energy">
+                    <div class="energy-bar">
+                        <div class="energy-fill" style="width: 85%"></div>
+                    </div>
+                    <span class="energy-text">Enigma Energy: 85%</span>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
     
-    <!-- Additional inline script for navigation -->
+    <!-- Initialize ENKI -->
     <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
-            document.getElementById(sectionId + '-section').classList.add('active');
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-            
-            return false;
-        }
-        
-        // Initialize ENKI wallet
         let enigmaWallet;
         document.addEventListener('DOMContentLoaded', () => {
             enigmaWallet = new EnigmaWallet();
             window.enigmaWallet = enigmaWallet;
             
             // Make gift box clickable
-            document.getElementById('gift-box').addEventListener('click', () => {
-                enigmaWallet.toggleGift();
+            document.getElementById('giftBox').addEventListener('click', () => {
+                enigmaWallet.revealTreasure();
             });
             
-            // Update connection button
-            document.getElementById('connect-btn').addEventListener('click', () => {
-                enigmaWallet.connectWallet();
-            });
+            // Initial greeting
+            setTimeout(() => {
+                enigmaWallet.showWelcome();
+            }, 1000);
         });
     </script>
 </body>
