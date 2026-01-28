@@ -1,0 +1,36 @@
+{
+  "name": "enigma-starter",
+  "version": "0.1.0",
+  "description": "A mysterious digital wallet that treats crypto assets like precious gifts waiting to be unwrapped",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Building ENIGMA...\"",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "crypto",
+    "wallet",
+    "gift",
+    "blockchain",
+    "enigma",
+    "mystery",
+    "web3"
+  ],
+  "author": "Novish Developer",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "gh-pages": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khan-amit/ENIGMA_STARTER.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khan-amit/ENIGMA_STARTER/issues"
+  },
+  "homepage": "https://khan-amit.github.io/ENIGMA_STARTER"
+}
