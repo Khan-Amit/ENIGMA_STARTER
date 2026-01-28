@@ -672,3 +672,127 @@ h1 {
 .glow-gold {
     box-shadow: 0 0 15px var(--accent-gold);
 }
+/* === ENIGMA TREASURE STYLES === */
+
+#status {
+  min-height: 60px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#treasure {
+  display: none;
+  opacity: 0;
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: opacity 0.8s;
+}
+
+.treasure-card {
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.15), 
+    rgba(59, 130, 246, 0.1));
+  border: 2px solid rgba(168, 85, 247, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.treasure-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.treasure-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.treasure-balance {
+  text-align: center;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 2rem 0;
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.currency {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  opacity: 0.9;
+}
+
+.treasure-address {
+  background: rgba(0,0,0,0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+  font-size: 0.9rem;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+.action-btn.secondary {
+  background: transparent;
+  border: 2px solid #8b5cf6;
+  color: #8b5cf6;
+}
+
+/* Animation for gift box */
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.gift-box {
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: gentlePulse 3s infinite;
+}
+
+.gift-box:hover {
+  animation: gentlePulse 1s infinite;
+}
